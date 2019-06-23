@@ -23,7 +23,7 @@
             font-family: 'Noto Sans', sans-serif !important;
         }
     </style>
-    </style>
+
 </head>
 
 <body>
@@ -46,22 +46,44 @@
             <tr>
                 <th scope="row">1</th>
                 <td scope="row" style="background-color:green;"></td>
-                <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
-                    կրակը, կամ նրան կոխկրտում է գիշատիչը</td>
+                <td>Կանաչը խոտն է, որը բազմանում է Մոտակա 8 վանդակներում, 4 տակտը մեկ ,Ամառը խոտը կանաչ է ,Աշնանը բաց նարնջագույն,ձմռանը բաց կապույտ ,գարնանը բաց կանաչ</td>
                 <td id="grassCount"></td>
             </tr>
             <tr>
                 <th scope="row">2</th>
+                <td scope="row" style="background-color:yellow;"></td>
+                <td>Դեղինը խոտակերն է, որը բազմանում է Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով ,Խոտ ուտելուց 3֊ով ավելանում է;
+                    մահանում է երբ նրան ուտում են կամ եներգյան է վերջանում:</td>
+                <td id="grasseaterCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմիրը Գիշատիչ, որը բազմանում է ոտելով խոտակեր: մահանում է երբ նրան ուտում են կամ եներգյան է վերջանում:</td>
+                <td id="gishatichCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
                 <td scope="row" style="background-color:orange;"></td>
-                <td>Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
-                    երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</td>
-                <td id="grassEaterCount"></td>
+                <td>Գազարագույնը Կաբանն է, որը բազմանում է ուտելով գիշատիչին:մահանում է երբ նրան ուտում են կամ եներգյան է վերջանում:</td>
+                <td id="kabanCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td>Սև Կատաղի ուտումե բոլորին և անմահ է </td>
+                <td id="kataxiCount"></td>
             </tr>
         </tbody>
     </table>
+    <p id="cuycTalExanak"></p>
+    <input id="button1" type="button" value="Գարուն" onclick="Sarqelexanak(0)">
+    <input id="button2" type="button" value="Ամառ" onclick="Sarqelexanak(5)">
+    <input id="button3" type="button" value="Աշուն" onclick="Sarqelexanak(10)">
+    <input id="button4" type="button" value="Ձմեռ" onclick="Sarqelexanak(15)">
     <script src="p5.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
 
-</html>
+</html>`

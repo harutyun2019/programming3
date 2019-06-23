@@ -7,6 +7,8 @@ module.exports = class GrassEater extends LiveForm {
     constructor(x, y) {
         super(x, y);
         this.life = 10;
+        this.index = 2;
+        grasseaterHashiv++;
     }
     getNewCoordinates() {
         this.directions = [
@@ -58,7 +60,7 @@ module.exports = class GrassEater extends LiveForm {
             this.x = x;
             this.y = y;
 
-            if (this.life >= 13) {
+            if (this.life >= 5) {
                 this.mul();
             }
         }

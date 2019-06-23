@@ -1,7 +1,12 @@
+var LiveForm = require("./LiveForm");
+var random = require("./random.js");
+
 module.exports = class Gishatich extends LiveForm {
-    constructor(x, y, index){
-        super(x, y, index);
+    constructor(x, y){
+        super(x, y);
+        this.index=3;
         this.energy = 8;
+        gishatichHashiv++;
     }
    getNewCoordinates() {
        this.directions = [
@@ -35,7 +40,7 @@ module.exports = class Gishatich extends LiveForm {
             this.y = newY;
             this.x = newX;
 
-
+            
         }
         this.energy--;
     }
@@ -47,7 +52,7 @@ module.exports = class Gishatich extends LiveForm {
         if (newCell) {
             var newX = newCell[0];
             var newY = newCell[1];
-
+          
             matrix[this.y][this.x] = 0;
             matrix[newY][newX] = this.index;
 

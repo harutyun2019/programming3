@@ -1,11 +1,14 @@
 var LiveForm = require("./LiveForm");
+var Grass = require("./Grass.js");
 var random = require("./random");
 
 
 module.exports = class Kaban extends LiveForm {
-    constructor(x, y, index){
-        super(x, y, index);
+    constructor(x, y){
+        super(x, y);
+        this.index = 4;
         this.energy = 8;
+        kabanHashiv++;
     }
    getNewCoordinates() {
        this.directions = [
@@ -18,14 +21,6 @@ module.exports = class Kaban extends LiveForm {
            [this.x, this.y + 1],
            [this.x + 1, this.y + 1]
 
-           [this.x - 1, this.y - 1],
-           [this.x, this.y - 1],
-           [this.x + 1, this.y - 1],
-           [this.x - 1, this.y],
-           [this.x + 1, this.y],
-           [this.x - 1, this.y + 1],
-           [this.x, this.y + 1],
-           [this.x + 1, this.y + 1]
        ];
    }
    chooseCell(character) {
@@ -96,7 +91,7 @@ module.exports = class Kaban extends LiveForm {
 
         var newCell = random(this.chooseCell(0));
 
-        if (this.energy >= 22 && newCell) {
+        if (this.energy >= 18 && newCell) {
 
             var newkaban = new Kaban(newCell[0], newCell[1], this.index);
             kabanArr.push(newkaban);

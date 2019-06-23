@@ -3,9 +3,11 @@ var random = require("./random");
 
 
 module.exports = class Kataxi extends LiveForm {
-    constructor(x, y, index){
-        super(x, y, index);
+    constructor(x, y){
+        super(x, y);
+        this.index=5;
         this.energy = 8;
+        kataxiHashiv++;
     }
    getNewCoordinates() {
        this.directions = [
@@ -97,14 +99,14 @@ module.exports = class Kataxi extends LiveForm {
 
         var newCell = this.chooseCell(0);
 
-        if (this.energy >= 100 && newCell) {
+        if (this.energy >= 20 && newCell) {
             for (var k in newCell) {
                 var x = newCell[k][0]
                 var y = newCell[k][1]
                 var newkataxi = new Kataxi(x, y, this.index);
                 kataxiArr.push(newkataxi)
                 matrix[y][x] = this.index;
-                this.energy = 10;
+                this.energy = 5;
             }
             
         }
